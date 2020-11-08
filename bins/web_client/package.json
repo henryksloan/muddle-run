@@ -7,9 +7,9 @@
   "author": "mvlabat <mvlabat@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start:dev": "webpack-dev-server --mode development"
+    "dev": "RUSTFLAGS=--cfg=web_sys_unstable_apis webpack --mode development",
+    "build": "RUSTFLAGS=--cfg=web_sys_unstable_apis webpack --mode production",
+    "start:dev": "RUSTFLAGS=--cfg=web_sys_unstable_apis webpack-dev-server --mode development"
   },
   "devDependencies": {
     "@wasm-tool/wasm-pack-plugin": "^1.3.1",
